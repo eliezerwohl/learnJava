@@ -9,8 +9,6 @@ public class HelloWorld {
 
         int lives = 1;
         boolean isGameover = (lives < 0);
-        System.out.println(isGameover);
-
         if (isGameover){
             System.out.println("game over!");
         }
