@@ -103,8 +103,9 @@ public class Player {
         return false;
     }
     public void showIventory(){
-        for (Loot item : inventory){
-            System.out.println(item.getName());
+        // for (class varName : nameOfArray)
+        for (Loot testing : inventory){
+            System.out.println(testing.getName());
         }
         System.out.println("====================");
     }
