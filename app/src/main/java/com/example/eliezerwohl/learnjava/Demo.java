@@ -15,6 +15,11 @@ public class Demo {
         vlad.showInfo();
         vlad.takeDamage(24);
         vlad.showInfo();
+
+        VampireKing king = new VampireKing("King");
+        king.showInfo();
+        king.takeDamage(4);
+        king.showInfo();
     }
 //    public static void main(String[] args) {
 //        Enemy enemy = new Enemy ("Testing", 10, 3);
