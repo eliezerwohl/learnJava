@@ -3,6 +3,8 @@ package com.example.eliezerwohl.learnjava;
 
 import java.util.ArrayList;
 
+import static android.R.attr.name;
+
 /**
  * Created by Elie on 11/4/2016.
  */
@@ -102,11 +104,34 @@ public class Player {
         }
         return false;
     }
-    public void showIventory(){
+
+    public boolean dropLoot (String lootName ){
+        for (Loot currentLoot : inventory){
+            if (currentLoot.getName().equals((lootName))){
+                inventory.remove(currentLoot);
+                return true;
+            }
+
+        }
+        return false;
+    }
+    public void showInventory(){
         // for (class varName : nameOfArray)
         for (Loot testing : inventory){
             System.out.println(testing.getName());
         }
         System.out.println("====================");
     }
+    public int score(){
+        int total = 0;
+//        for (int i=  0; i < inventory.size(); i++){
+        //            Loot currentLoot = inventory.get(i);
+        //for each loop
+        for(Loot currentLoot:inventory){
+            System.out.println(currentLoot.getName() + "is worth " + currentLoot.getValue());
+            total = total + currentLoot.getValue();
+        }
+        return total;
+    }
+
 }
